@@ -93,8 +93,7 @@ function App() {
         >
           <Routes>
             {
-              views.m      })}
-ey = {index} exact = {view.exact} path = {view.path} element = {<view.component />} />)
+              views.map((view, index)=> <Route key = {index} exact = {view.exact} path = {view.path} element = {<view.component />} />)
             }
           </Routes>
         </AppShell>
