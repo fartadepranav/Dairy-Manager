@@ -5,13 +5,13 @@ import { useForm } from '@mantine/form';
 export default function GetInTouchSimple() {
   const form = useForm({
     initialValues: {
-      name: '',
-      email: '',
+      SNF: '',
+      Price: '',
       subject: '',
       message: '',
     },
     validate: {
-      name: (value) => value.trim().length < 2,
+      SNF: (value) => value.trim().length < 2,
       email: (value) => !/^\S+@\S+$/.test(value),
       subject: (value) => value.trim().length === 0,
     },

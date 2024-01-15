@@ -10,6 +10,7 @@ import { MemoryRouter, NavLink, Route, Routes } from 'react-router-dom';
 
 import Home from './Home/Home.js';
 import Settings from './Settings/Settings.js';
+import Beneficiary from './Beneficiary/Beneficiary.js';
 
 function App() {
 
@@ -20,9 +21,14 @@ function App() {
     exact: 'true',
     component: Home
   }, {
-    path: 'settings',
-    name: 'Settings',
+    path: 'configuration',
+    name: 'Pricing',
     component: Settings
+  },
+  {
+    path: 'beneficiary',
+    name: 'Beneficiary',
+    component: Beneficiary
   }
 ];
 
