@@ -31,7 +31,7 @@ export default function GetInTouchSimple() {
 
       <SimpleGrid cols={2} mt="xl" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
         <TextInput
-          label="Name"
+          label="SNF"
           placeholder="Your name"
           name="name"
           variant="filled"
