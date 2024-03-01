@@ -32,9 +32,8 @@ export default function Beneficiary() {
       <div className="form-group">
         <label htmlFor="phoneNumber">Phone Number:</label>
         <input
-          type="number"
+          type="text"
           id="phoneNumber"
-          value={phoneNumber}
           onChange={(event) => setPhoneNumber(parseInt(event.target.value))}
         />
       </div>
