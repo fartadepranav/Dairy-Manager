@@ -3,12 +3,17 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"github.com/gorilla/handlers"
+	"github.com/gorilla/mux"
 
 	"github.com/gin-gonic/gin"
 	_ "github.com/mattn/go-sqlite3"
 )
 
-var blah = "blah"
+corsOptions := handlers.AllowedOrigins([]string{"*"})
+r := mux.NewRouter()
+r.Use(handlers.CORS(corsOptions))
+log.Fatal(http.ListenAndServe(":8080", r))
 
 func main() {
 	// Create a new Gin router
@@ -17,13 +22,6 @@ func main() {
 
 	fmt.Print(db)
 	fmt.Print(err)
-
-	// Define your routes and handlers
-	//router.GET("/api/test", Testget)
-
-	//router.GET("/api/getData", Readdata)
-
-	//router.POST("/api/post", Posthandler)
 
 	// Customer routes
 	router.POST("/api/addCustomer", AddCustomer)
